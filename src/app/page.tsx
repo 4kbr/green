@@ -1,6 +1,4 @@
 import ImageCarousel from "@/components/ImageCarousel";
-import Image from "next/image";
-import React from "react";
 
 const Home = () => {
   const a = [];

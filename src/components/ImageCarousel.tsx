@@ -4,51 +4,51 @@ import { LegacyRef, ReactNode, useRef, useState } from "react";
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
 
 const ImageCarousel = () => {
-  const [index, setIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(0);
   const scrollRef = useRef(null);
-  const a = [];
-  for (let i = 0; i < 5; i++) {
-    a.push(i);
-  }
+  const imgs = [
+    "https://images.unsplash.com/photo-1550401732-f2615d09b2d4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80",
+    "https://images.pexels.com/photos/14502681/pexels-photo-14502681.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "https://images.pexels.com/photos/16968225/pexels-photo-16968225/free-photo-of-blue-angels-5-6.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "https://images.pexels.com/photos/3074526/pexels-photo-3074526.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "https://images.pexels.com/photos/16208497/pexels-photo-16208497/free-photo-of-hills-on-sea-shore.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+  ];
+  // for (let i = 0; i < 5; i++) {
+  //   a.push("https://images.unsplash.com/photo-1550401732-f2615d09b2d4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80");
+  // }
   const handleArrow = (direction: string) => {
-    console.log(window.screen.width);
-    const widthScreen = window.screen.width;
-    const whalf = window.screen.width / 8;
     if (direction === "l") {
-      index !== 0 && setIndex((prev) => prev - 1);
-      scrollRef.current.scrollLeft -= widthScreen - whalf * index;
+      const isFirstSlid = currentIndex === 0;
+      const newIndex = isFirstSlid ? imgs.length - 1 : currentIndex - 1;
+      setCurrentIndex(newIndex);
     }
     if (direction === "r") {
-      index !== a.length - 1 && setIndex((prev) => prev + 1);
-      scrollRef.current.scrollLeft += widthScreen - whalf * index;
+      const isLastChild = currentIndex === imgs.length - 1;
+      const newIndex = isLastChild ? 0 : currentIndex + 1;
+      setCurrentIndex(newIndex);
     }
-    console.log("index ke " + index);
   };
   return (
-    <div
-      className="testSlider relative h-[60vw] bg-blue-300 flex items-center overflow-auto scroll-smooth gap-5 w-[100vw]"
-      ref={scrollRef}
-    >
+    <div className="testSlider relative h-[60vw] w-full  flex items-center">
       <div
-        className="sticky w-5 h-5 left-0 bottom-0 top-0 z-[2]"
+        className="sticky w-5 h-5 left-0 bottom-0 top-0 m-auto z-[2]"
         onClick={() => handleArrow("l")}
       >
         <AiOutlineArrowLeft className="w-5 h-5" />
       </div>
-      {a.map((i, nome) => (
-        <div className="carouselContainer" key={i}>
-          <div className="w-[80vw] h-[40vw] relative">
-            <Image
-              src={
-                "https://images.unsplash.com/photo-1550401732-f2615d09b2d4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80"
-              }
-              alt=""
-              fill
-              className="object-cover"
-            />
-          </div>
-        </div>
-      ))}
+
+      <div
+        className="w-[95vw] h-[45vw] relative m-auto bg-cover bg-center  duration-1000"
+        style={{ backgroundImage: `url(${imgs[currentIndex]})` }}
+      >
+        {/* <Image
+          src={imgs[currentIndex]}
+          alt=""
+          fill
+          className="object-cover object-center rounded-xl transition-all duration-1000"
+        /> */}
+      </div>
+
       <div
         className="sticky w-5 h-5 right-0 bottom-0 top-0 m-auto z-[2]"
         onClick={() => handleArrow("r")}
