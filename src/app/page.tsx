@@ -10,6 +10,7 @@ const Home = () => {
   return (
     <div className="min-h-[200vh] w-full flex flex-col">
       <ImageCarousel />
+      <div className="h-64"></div>
     </div>
   );
 };
