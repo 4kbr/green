@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar/Navbar";
-import "./globals.css";
 import { Inter } from "next/font/google";
+import "./globals.css";
+import Footbar from "@/components/Footbar/Footbar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,6 +21,7 @@ export default function RootLayout({
         <div className="min-h-screen my-0 mx-0 py-0 flex flex-col w-full">
           <Navbar />
           <div className="pt-24">{children}</div>
+          <Footbar />
         </div>
       </body>
     </html>

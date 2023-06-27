@@ -1,11 +1,9 @@
-import Image from "next/image";
-import styles from "./HomeProducts.module.css";
 import ProductItem from "../ProductItem/ProductItem";
 const HomeProducts = () => {
   return (
     <div className="flex flex-col">
       <h1 className="text-xl font-bold text-primary">New medical product</h1>
-      <div className="flex gap-5 bg-blue-300 w-[100vw] overflow-auto py-5">
+      <div className="flex gap-5  w-[100vw] overflow-auto py-5">
         <div className="ml-5">
           <ProductItem
             currentPrice={25000}
