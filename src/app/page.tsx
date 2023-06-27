@@ -1,4 +1,5 @@
-import ImageCarousel from "@/components/ImageCarousel";
+import HomeIconMenus from "@/components/HomeIconMenus/HomeIconMenus";
+import ImageCarousel from "@/components/ImageContainer/ImageCarousel";
 
 const Home = () => {
   const a = [];
@@ -6,9 +7,12 @@ const Home = () => {
     a.push(i);
   }
   return (
-    <div className="min-h-[200vh] w-full flex flex-col">
+    <div className="min-h-[200vh] w-full flex flex-col gap-y-5">
       <ImageCarousel />
-      <div className="h-64"></div>
+      <HomeIconMenus />
+      <div className="">
+        <h1 className="text-2xl">New medical product</h1>
+      </div>
     </div>
   );
 };
