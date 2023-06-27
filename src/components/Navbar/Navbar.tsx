@@ -1,8 +1,10 @@
+"use client";
 import Link from "next/link";
-import React from "react";
+import { useState } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
 
 const Navbar = () => {
+  const [open, setOpen] = useState(false);
   return (
     <div className="flex h-24 justify-between items-center px-5 fixed bg-main w-full z-[99] gap-5">
       <Link href={"/"} className="font-bold text-xl">
@@ -26,8 +28,40 @@ const Navbar = () => {
           🔍
         </button>
       </div>
-      <button className="hidden">Sigin</button>
-      <button>
+      <div
+        className={`right-bar absolute top-full flex flex-col-reverse items-start w-72 transition-all duration-500 ${
+          open ? "right-[2%]" : "-right-[200%]"
+        } `}
+      >
+        <ul className="navbar w-full text-main bg-ligthPrimary">
+          <li>
+            <a href="" className="active">
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="">About Us</a>
+          </li>
+          <li>
+            <a href="">Services</a>
+          </li>
+          <li>
+            <a href="">Blog</a>
+          </li>
+          <li>
+            <a href="">Contact</a>
+          </li>
+        </ul>
+        <div className="main flex flex-col w-full bg-main px-6 py-0">
+          <a href="#" className="user my-3 mx-0">
+            <i className="ri-user-3-fill"></i>Sign In
+          </a>
+          <a href="#" className=" my-3 mx-0">
+            Register
+          </a>
+        </div>
+      </div>
+      <button onClick={() => setOpen(!open)}>
         <AiOutlineMenu className="h-10 w-10" />
       </button>
     </div>
