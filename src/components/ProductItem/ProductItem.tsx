@@ -25,7 +25,7 @@ const ProductItem = ({
     <div
       className={`flex flex-col w-36 bg-[#222] rounded-xl items-center overflow-hidden ${
         heightFit && "h-fit"
-      }`}
+      } min-h-[275px]`}
     >
       <div className="relative w-full h-36">
         <Image src={imgSrc} fill alt="lemon" className="object-cover" />

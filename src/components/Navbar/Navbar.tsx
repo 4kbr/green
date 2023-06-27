@@ -4,8 +4,8 @@ import { AiOutlineMenu } from "react-icons/ai";
 
 const Navbar = () => {
   return (
-    <div className="flex h-24 justify-between items-center px-5 fixed bg-main w-full z-[99]">
-      <Link href={"/"} className="font-bold text-xl hidden">
+    <div className="flex h-24 justify-between items-center px-5 fixed bg-main w-full z-[99] gap-5">
+      <Link href={"/"} className="font-bold text-xl">
         FUYYA
       </Link>
       <div className="relative w-[80%]">

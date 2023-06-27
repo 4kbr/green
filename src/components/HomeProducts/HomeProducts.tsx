@@ -5,40 +5,58 @@ const HomeProducts = () => {
   return (
     <div className="flex flex-col">
       <h1 className="text-xl font-bold text-primary">New medical product</h1>
-      <div className="flex gap-5 bg-blue-300 w-[100vw] ">
-        <ProductItem
-          currentPrice={25000}
-          imgSrc="https://images.pexels.com/photos/2477379/pexels-photo-2477379.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-          title="Teh Manis Asli Sunda Minuman manis seperti anda CIRAOUS PUNYA"
-          sold={10}
-        />
-        <ProductItem
-          currentPrice={35000}
-          imgSrc="https://images.pexels.com/photos/2477379/pexels-photo-2477379.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-          title="Teh Manis Asli Sunda Minuman manis seperti anda CIRAOUS PUNYA"
-          sold={10}
-          rate={4.5}
-          discount={0.5}
-          price={35000 / 0.5}
-        />
-        <ProductItem
-          currentPrice={35000}
-          imgSrc="https://images.pexels.com/photos/2477379/pexels-photo-2477379.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-          title="Teh Manis Asli Sunda Minuman manis seperti anda CIRAOUS PUNYA"
-          sold={10}
-          rate={4.5}
-          discount={0.9}
-          price={35000 / 0.9}
-        />
-        <ProductItem
-          currentPrice={35000}
-          imgSrc="https://images.pexels.com/photos/2477379/pexels-photo-2477379.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-          title="Teh Manis Asli Sunda Minuman manis seperti anda CIRAOUS PUNYA"
-          sold={10}
-          rate={4.5}
-          discount={0.87}
-          price={35000 / 0.87}
-        />
+      <div className="flex gap-5 bg-blue-300 w-[100vw] overflow-auto py-5">
+        <div className="ml-5">
+          <ProductItem
+            currentPrice={25000}
+            imgSrc="https://images.pexels.com/photos/2477379/pexels-photo-2477379.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            title="Teh Manis Asli Sunda Minuman manis seperti anda CIRAOUS PUNYA"
+          />
+        </div>
+        <div className="">
+          <ProductItem
+            currentPrice={35000}
+            imgSrc="https://images.pexels.com/photos/2477379/pexels-photo-2477379.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            title="Teh Manis Asli Sunda Minuman manis seperti anda CIRAOUS PUNYA"
+            sold={10}
+            rate={4.5}
+            discount={0.5}
+            price={35000 / 0.5}
+          />
+        </div>
+        <div className="">
+          <ProductItem
+            currentPrice={35000}
+            imgSrc="https://images.pexels.com/photos/2477379/pexels-photo-2477379.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            title="Teh Manis Asli Sunda Minuman manis seperti anda CIRAOUS PUNYA"
+            sold={10}
+            rate={4.5}
+            discount={0.5}
+            price={35000 / 0.5}
+          />
+        </div>
+        <div className="">
+          <ProductItem
+            currentPrice={35000}
+            imgSrc="https://images.pexels.com/photos/2477379/pexels-photo-2477379.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            title="Teh Manis Asli Sunda Minuman manis seperti anda CIRAOUS PUNYA"
+            sold={10}
+            rate={4.5}
+            discount={0.5}
+            price={35000 / 0.5}
+          />
+        </div>
+        <div className="mr-5">
+          <ProductItem
+            currentPrice={35000}
+            imgSrc="https://images.pexels.com/photos/2477379/pexels-photo-2477379.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            title="Teh Manis Asli Sunda Minuman manis seperti anda CIRAOUS PUNYA"
+            sold={10}
+            rate={4.5}
+            discount={0.5}
+            price={35000 / 0.5}
+          />
+        </div>
       </div>
     </div>
   );
