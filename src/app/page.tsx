@@ -1,4 +1,5 @@
 import HomeIconMenus from "@/components/HomeIconMenus/HomeIconMenus";
+import HomeProducts from "@/components/HomeProducts/HomeProducts";
 import ImageCarousel from "@/components/ImageContainer/ImageCarousel";
 
 const Home = () => {
@@ -10,9 +11,7 @@ const Home = () => {
     <div className="min-h-[200vh] w-full flex flex-col gap-y-5">
       <ImageCarousel />
       <HomeIconMenus />
-      <div className="">
-        <h1 className="text-2xl">New medical product</h1>
-      </div>
+      <HomeProducts />
     </div>
   );
 };

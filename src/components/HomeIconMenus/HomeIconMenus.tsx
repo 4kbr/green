@@ -18,23 +18,23 @@ const HomeIconMenus = () => {
       </Link>
       <Link className={`${styles.iconDiv}`} href={"/"}>
         <FaHandHoldingMedical size={35} />
-        <span>Medical Kit</span>
+        <span>Medical Tools</span>
       </Link>
       <Link className={`${styles.iconDiv}`} href={"/"}>
         <ImPriceTags size={35} />
-        <span>Promo List</span>
+        <span>Promo Listess</span>
       </Link>
       <Link className={`${styles.iconDiv}`} href={"/"}>
         <ImPriceTags size={35} />
-        <span>Promo List</span>
+        <span>Promo Listess</span>
       </Link>
       <Link className={`${styles.iconDiv}`} href={"/"}>
         <ImPriceTags size={35} />
-        <span>Promo List</span>
+        <span>Promo Listess</span>
       </Link>
       <Link className={`${styles.iconDiv}`} href={"/"}>
         <ImPriceTags size={35} />
-        <span>Promo List</span>
+        <span>Promo Listess</span>
       </Link>
     </div>
   );
